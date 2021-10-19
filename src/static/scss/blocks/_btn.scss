@@ -1,0 +1,60 @@
+a.btn {
+	display: inline-block;
+}
+.btn {
+	box-shadow: 0 0.8rem 1.6rem rgba(55, 8, 152, 0.1);
+	border-radius: 100rem;
+	border: none;
+	padding-top: 2.2rem;
+	padding-bottom: 2.2rem;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $color-white;
+	letter-spacing: 0.28rem;
+	text-align: center;
+
+	&--white {
+		color: #a4a5cd;
+		background-color: $color-white;
+		border: 2px solid #f0f0f0;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: #6769a9;
+			color: #fff;
+		}
+	}
+
+	&--lg {
+		padding-left: 6.6rem;
+		padding-right: 6.6rem;
+	}
+
+	&--md {
+		padding-left: 5.6rem;
+		padding-right: 5.6rem;
+	}
+
+	&--sm {
+		padding-left: 4.6rem;
+		padding-right: 4.6rem;
+	}
+
+	@include respond(md) {
+		&--lg {
+			padding-left: 6.6rem;
+			padding-right: 6.6rem;
+		}
+
+		&--md {
+			padding-left: 5.6rem;
+			padding-right: 5.6rem;
+		}
+
+		&--sm {
+			padding-left: 4.6rem;
+			padding-right: 4.6rem;
+		}
+	}
+}

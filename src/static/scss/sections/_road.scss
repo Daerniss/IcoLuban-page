@@ -1,0 +1,221 @@
+.road {
+	position: relative;
+	overflow: visible;
+	margin-bottom: 12.4rem;
+
+	&::after {
+		z-index: -1;
+		content: '';
+		width: 100%;
+		height: 145%;
+		position: absolute;
+		top: -20%;
+		left: 0;
+		background-image: url('../img/bg-road-1.jpg');
+		background-size: cover;
+		background-position: top 70% right 20%;
+		background-repeat: no-repeat;
+	}
+
+	&__text-wrap {
+		margin: 0 auto;
+		width: 90%;
+		max-width: 74.3rem;
+		text-align: center;
+		margin-bottom: 10rem;
+	}
+
+	&__subtitle {
+		margin-bottom: 4rem;
+	}
+
+	&__svg {
+		.paths {
+			fill: none;
+			stroke-dasharray: 25;
+			stroke-width: 10;
+			stroke: url('#linear-gradient1');
+		}
+
+		.mask {
+			fill: none;
+			stroke: white;
+			stroke-width: 20;
+			stroke-dasharray: 1776;
+			stroke-dashoffset: 1776;
+			animation: dash 5s linear forwards;
+		}
+	}
+
+	&__plane {
+		display: none;
+
+		@include respond(md) {
+			display: block;
+			position: absolute;
+			right: -38px;
+			top: -10px;
+			opacity: 0;
+			width: 0;
+			transition: all .4s;
+			transition-delay: 5s;
+
+			&--active {
+				opacity: 1;
+				width: auto;
+			}
+		}
+	}
+
+	&__animation {
+		width: 90%;
+		max-width: 1483px;
+		margin: 0 auto;
+
+		svg {
+			display: none;
+		}
+
+		@include respond(md) {
+			position: relative;
+
+			svg {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__list {
+		padding: 0 2rem;
+
+		@include respond(sm) {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		@include respond(md) {
+			height: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+
+		@include respond(md) {
+			transition: all .4s;
+			opacity: 0;
+			width: 0;
+
+			&--animate {
+				opacity: 1;
+				width: auto;
+			}
+
+			&--1,
+			&--2,
+			&--3 {
+				img {
+					position: absolute;
+				}
+
+				.road__text-box {
+					position: absolute;
+					max-width: 33.7rem;
+					text-align: left;
+				}
+			}
+
+			&--1 {
+				img {
+					bottom: -14%;
+					left: -3.5%;
+				}
+
+				.road__text-box {
+					bottom: -16%;
+					left: 10%;
+				}
+			}
+
+			&--2 {
+				transition-delay: 2.2s;
+
+				img {
+					left: 45%;
+					bottom: 8%;
+				}
+
+				.road__text-box {
+					left: 56%;
+					bottom: -2%;
+				}
+			}
+
+			&--3 {
+				transition-delay: 4.2s;
+
+				img {
+					top: 3%;
+					right: 12%;
+				}
+
+				.road__text-box {
+					top: 29%;
+					right: -4%;
+				}
+			}
+		}
+	}
+
+	&__img {
+		width: 12.5rem;
+		height: 12.5rem;
+		margin-bottom: 3rem;
+
+		@include respond(md) {
+			width: 8.5rem;
+			height: 8.5rem;
+		}
+
+		@include respond(lg) {
+			width: 12.5rem;
+			height: 12.5rem;
+		}
+	}
+
+	&__title {
+		color: #1f2047;
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 2.5rem;
+
+		@include respond(md) {
+			font-size: 25px;
+			margin-bottom: 1.5rem;
+		}
+
+		@include respond(xl) {
+			font-size: 36px;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__text {
+		color: #8081af;
+		font-size: 16px;
+		line-height: 1.5;
+
+		@include respond(xl) {
+			font-size: 18px;
+		}
+	}
+}

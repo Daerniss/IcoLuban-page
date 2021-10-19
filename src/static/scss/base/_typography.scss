@@ -1,0 +1,75 @@
+body {
+	line-height: 1.05;
+}
+
+a {
+	text-decoration: none;
+}
+
+.heading {
+	color: $color-heading;
+	font-weight: 700;
+	// font-family: ;
+
+	&--primary {
+		font-size: 40px;
+	}
+
+	&--secondary {
+		font-size: 35px;
+	}
+
+	&--tertiary {
+		font-size: 25px;
+	}
+
+	@include respond(sm) {
+		&--primary {
+			font-size: 50px;
+		}
+
+		&--secondary {
+			font-size: 45px;
+		}
+
+		&--tertiary {
+			font-size: 35px;
+		}
+	}
+
+	@include respond(md) {
+		&--primary {
+			font-size: 60px;
+		}
+
+		&--secondary {
+			font-size: 50px;
+		}
+
+		&--tertiary {
+			font-size: 40px;
+		}
+	}
+
+	@include respond(lg) {
+		&--primary {
+			font-size: 88px;
+		}
+
+		&--secondary {
+			font-size: 60px;
+		}
+
+		&--tertiary {
+			font-size: 50px;
+		}
+	}
+}
+
+.subtitle {
+	color: #c2b6dc;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.4rem;
+}

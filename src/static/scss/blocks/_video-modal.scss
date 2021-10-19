@@ -1,0 +1,31 @@
+.video-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
+
+	background-color: rgba(#000, .9);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s ease;
+
+	&--active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__body {
+		iframe {
+			min-width: 100%;
+			max-width: 56rem;
+			height: auto;
+			min-height: 31.5rem;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.footer {
+	padding-top: 25rem;
+	padding-bottom: 14rem;
+	text-align: center;
+
+	&__img {
+		width: 17rem;
+		height: 17rem;
+		margin-bottom: 6rem;
+	}
+
+	&__heading {
+		margin-bottom: 4.7rem;
+	}
+
+	&__text {
+		color: #9899c5;
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 6rem;
+	}
+
+	@include respond(md) {
+		max-width: 100rem;
+		margin: 0 auto;
+	}
+}

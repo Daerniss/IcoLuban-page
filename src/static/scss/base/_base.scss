@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	// font-size: 62.5%;
+	font-size: 31.25%;
+
+	@include respond(sm) {
+		font-size: 50%;
+	}
+
+	@include respond(md) {
+		font-size: 56.25%;
+	}
+
+	@include respond(lg) {
+		font-size: 62.5%;
+	}
+
+	overflow: visible;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 16px;
+	position: relative;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	max-width: 100%;
+	padding: 0 2rem;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include respond(md) {
+		padding: 0;
+	}
+}
+
+.bg {
+	background: linear-gradient(to right, #2d0397 0%, #f962a9 100%);
+	transition: all 1s ease;
+
+	&:hover {
+		background: linear-gradient(to right, lighten(#2d0397, 10%) 0%, lighten(#f962a9, 10%) 100%);
+	}
+}
