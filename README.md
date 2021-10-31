@@ -1,10 +1,12 @@
-# Ico Luban
+# ICO Luban landing page
 
-Ico Luban landing layout Dmitry Baltak
+DEMO: [Preview link](https://daerniss.github.io/IcoLuban-page/build/)
 
-# ICO Landing
+## Technologies used
 
-## To run build:
-    clone repo
-    npm i
-    gulp
+* HTML5
+* CSS3
+* Javascript
+* SASS
+* BEM
+* Gulp
