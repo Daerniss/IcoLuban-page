@@ -1,14 +1,16 @@
 // HEADER
+const header = document.querySelector('.header');
 const classes = {
 	pinned   : 'header__pin',
 	unpinned : 'header__unpin',
 	top      : 'header__top'
 };
+
 document.addEventListener('scroll', headerHandler);
-let lastKnownScrollY = 0;
 let currentY = window.pageYOffset;
-const header = document.querySelector('.header');
-function headerHandler (e) {
+let lastKnownScrollY = 0;
+
+function headerHandler () {
 	currentY = window.pageYOffset;
 
 	if (currentY == 0) {
@@ -37,7 +39,6 @@ document.querySelector('#menuToggle').addEventListener('change', function (e) {
 });
 
 // VIDEO MODAL
-
 document.querySelector('#videoBtn').addEventListener('click', function (e) {
 	const modal = document.querySelector('#modal');
 	const iframe = document.querySelector('.video-modal iframe');
@@ -63,7 +64,7 @@ window.addEventListener('scroll', function () {
 	const item1 = document.querySelector('.road__item--1');
 	const item2 = document.querySelector('.road__item--2');
 	const item3 = document.querySelector('.road__item--3');
-	console.log(anime.getBoundingClientRect().top);
+
 	if (anime.getBoundingClientRect().top < 0) {
 		svg.classList.add('road__svg');
 		item1.classList.add('road__item--animate');
