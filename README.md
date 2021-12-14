@@ -7,6 +7,6 @@ DEMO: [Preview link](https://daerniss.github.io/IcoLuban-page/build/)
 * HTML5
 * CSS3
 * Javascript
-* SASS
+* SCSS
 * BEM
 * Gulp
